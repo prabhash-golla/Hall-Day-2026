@@ -111,12 +111,15 @@ body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-se
 
 .cohost-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 36px; animation: rise 1s 0.45s cubic-bezier(.22,1,.36,1) both; }
 .cohost-pill { display: flex; align-items: center; gap: 10px; background: rgba(240,192,96,0.07); border: 1px solid rgba(240,192,96,0.22); padding: 10px 20px; border-radius: 60px; }
-.cohost-avatar { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
+.cohost-avatar { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
 .av-p { background: linear-gradient(135deg, #f0c060, #ffe099); color: #0b0a0f; }
 .av-s { background: linear-gradient(135deg, #e07070, #f0a080); color: #0b0a0f; }
 .cohost-info { text-align: left; }
 .cohost-name { font-family: 'Instrument Serif', serif; font-size: 17px; color: var(--text); line-height: 1; }
 .cohost-room { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-top: 3px; }
+
+/* Avatar images (use local files such as prabhash.jpeg and suchith.jpeg) */
+.cohost-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 
 .amp-big { font-family: 'Great Vibes', cursive; font-size: 36px; color: var(--rose); opacity: 0.8; line-height: 1; display: flex; align-items: center; animation: heartbeat 2.5s ease-in-out infinite; }
 
@@ -162,9 +165,11 @@ body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-se
 .host-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 36px 28px; text-align: center; transition: all 0.3s ease; }
 .host-card:hover { transform: translateY(-4px); border-color: rgba(240,192,96,0.35); }
 
-.host-avatar-lg { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Instrument Serif', serif; font-size: 30px; }
+.host-avatar-lg { width: 140px; height: 140px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Instrument Serif', serif; font-size: 30px; }
 .av-p-lg { background: linear-gradient(135deg, #f0c060, #ffe099); color: #0b0a0f; box-shadow: 0 0 24px rgba(240,192,96,0.25); }
 .av-s-lg { background: linear-gradient(135deg, #e07070, #f0a080); color: #0b0a0f; box-shadow: 0 0 24px rgba(224,112,112,0.2); }
+
+.host-avatar-lg img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 
 .hc-lbl { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-bottom:8px; }
 .hc-name { font-family:'Instrument Serif',serif; font-size:32px; color:var(--text); line-height:1.1; margin-bottom:6px; }
@@ -328,7 +333,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--rose) var(--bg); }
 
   <div class="cohost-row">
     <div class="cohost-pill">
-      <div class="cohost-avatar av-p">P</div>
+      <div class="cohost-avatar av-p"><img src="prabhash.jpeg" alt="Prabhash" loading="lazy"></div>
       <div class="cohost-info">
         <div class="cohost-name">Prabhash</div>
         <div class="cohost-room">Room D321</div>
@@ -336,7 +341,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--rose) var(--bg); }
     </div>
     <div class="amp-big">&amp;</div>
     <div class="cohost-pill">
-      <div class="cohost-avatar av-s">S</div>
+      <div class="cohost-avatar av-s"><img src="suchith.jpeg" alt="Suchith" loading="lazy"></div>
       <div class="cohost-info">
         <div class="cohost-name">Suchith</div>
         <div class="cohost-room">Room D322</div>
@@ -399,7 +404,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--rose) var(--bg); }
 
   <div class="hosts-grid">
     <div class="host-card reveal delay-1">
-      <div class="host-avatar-lg av-p-lg">P</div>
+      <div class="host-avatar-lg av-p-lg"><img src="prabhash.jpeg" alt="Prabhash" loading="lazy"></div>
       <div class="hc-lbl">Host One</div>
       <div class="hc-name">Prabhash</div>
       <div class="hc-room">Room D321 · D Block</div>
@@ -407,7 +412,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--rose) var(--bg); }
     </div>
     <div class="hosts-and">&amp;</div>
     <div class="host-card reveal delay-2">
-      <div class="host-avatar-lg av-s-lg">S</div>
+      <div class="host-avatar-lg av-s-lg"><img src="suchith.jpeg" alt="Suchith" loading="lazy"></div>
       <div class="hc-lbl">Host Two</div>
       <div class="hc-name">Suchith</div>
       <div class="hc-room">Room D322 · D Block</div>
